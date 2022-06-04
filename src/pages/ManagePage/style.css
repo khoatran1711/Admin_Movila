@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+}
+@font-face {
+    font-family: Intrepid;
+    src: url("../../../public/Intrepid.ttf"); /* TTF file for CSS3 browsers */
+  }
+
+#manage_area{
+    width:100vw;
+    height: 100vh;
+    background: url('../ManagePage/pic/background.jpg');
+    display: grid;
+    grid-template-columns: 5% 95%;
+    
+}
+
+#menu_option{
+    margin-top: 70vh;
+    margin-left: 1vw;
+    display: grid;
+    row-gap: 1vw;
+    grid-template-columns: 1fr;
+   
+}
+
+
+#manage_option{
+    border-right: 1px solid white;
+    
+}
+#info_option{
+    overflow:auto;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+#info_area{
+    margin-top: 3%;
+    width: 98%;
+    height: 90%;
+}

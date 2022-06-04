@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Intrepid;
+    src: url("../../../../../public/Intrepid.ttf"); /* TTF file for CSS3 browsers */
+}
+@font-face {
+    font-family: Fractis;
+    src: url("../../../../../public/Fractis\ Alt.ttf"); /* TTF file for CSS3 browsers */
+}
+
+#All_room_title{
+    font-family: Fractis;
+    font-size: 2vw;
+    padding-left: 4vw;
+    margin-left: 30vw;
+    background: -webkit-linear-gradient(#DFA54E, #FFFCC5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.room{
+    background: #fdfbf4;
+    width: 18vw;
+    height: 24vw;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.room_img{
+    background-size: 100% 100%;
+    width: 16vw;
+    height: 15vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    border-radius: 1vw;
+}
+
+.room_name{
+    font-family: Intrepid;
+    margin-top: 1vw;
+    font-size: 1.8vw;
+    color:#452F22;
+    text-align: center;
+}
+
+.room_status{
+    font-family: Intrepid;
+    margin-top: 1vw;
+    font-size: 1.2vw;
+    color:#452F22;
+    text-align: center;
+}
+
+#room_list{
+    margin-top: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+}

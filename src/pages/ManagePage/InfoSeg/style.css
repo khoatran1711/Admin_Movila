@@ -1,0 +1,77 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+@font-face {
+    font-family: Intrepid;
+    src: url("../../../../public/Intrepid.ttf"); /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+    font-family: Fractis;
+    src: url("../../../../public/Fractis\ Alt.ttf"); /* TTF file for CSS3 browsers */
+}
+
+#info_seg{
+    margin-left: 20vw;
+}
+
+#info_title{
+    
+    padding-left: 18vw;
+    font-family: Fractis;
+    font-size: 2.6vw;
+    background: -webkit-linear-gradient(#DFA54E, #FFFCC5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#info_form{
+    width: 100%;
+    height: 100%;
+}
+
+.info_label{
+    font-family: Intrepid;
+    font-size: 1.5vw;
+    margin-top: 1.5vw;
+    margin-left: 2vw;
+    color: #FDFBF4;
+    background: -webkit-linear-gradient(#DFA54E, #FFFCC5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info_text{
+    all: unset;
+    width: 50vw;
+    font-family: Intrepid;
+    color: #FDFBF4;
+    font-size: 1.2vw;
+    margin-top: 0.5vw;
+    margin-left: 2vw;
+    border-bottom: 1px solid #FDFBF4;
+}
+
+#submit_edit_info{
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 18vw;
+    margin-top: 2vw;
+    font-family: Intrepid;
+    background: none;
+    border: 1px solid #fdfbf4;
+    color: #fdfbf4 ;
+    font-size: 1.2vw;
+    padding: 0.6vw 1.5vw;
+}
+
+#submit_edit_info:hover{
+    background:#fdfbf4 ;
+    color: #472F23;
+    transition: 0.5s;
+}

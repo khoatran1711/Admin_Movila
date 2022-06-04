@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#room_manage_area{
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+#room_manage_option{
+
+}
+
+.card_option img{
+    margin-left: 0.7vw;
+    margin-top: 5.5vw;
+    width: 2vw;
+    height: 2vw;
+    transition: 0.8s;
+}
+
+.card_option{
+    cursor: pointer;
+    width: 4vw;
+    height: 14vw;
+    margin-top: 1vw;
+    background: #fdfbf4;
+    border-bottom-right-radius: 3vw;
+    border-top-right-radius: 3vw;
+    transition: 0.8s;
+    
+}
+
+.card_option:hover{
+    width: 6vw;
+    transition: 0.8s;
+}
+.card_option:hover img{
+    margin-left: 2.7vw;
+    transition: 0.8s;
+}
+
+#room_manage_info{
+    overflow: auto;
+}
