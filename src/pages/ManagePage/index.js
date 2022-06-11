@@ -9,14 +9,25 @@ import React, { useState } from 'react'
 import './style.css'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
+import { UseGetHotel } from '../../DataQuery/Queri.queries'
+import { UseGetAccountByID } from '../../DataQuery/Queri.queries'
+
 const InfoSeg = lazy(() => import('./InfoSeg'))
 const RoomManageSeg = lazy(() => import('./RoomManageSeg'))
 const BookRoomSeg = lazy(() => import('./BookRoomSeg'))
 
 const ManagePage = () => {
+	console.log(window.name)
+	const my_account = UseGetAccountByID(window.name)
+	const my_hotel = UseGetHotel(window.name)
+	console.log(my_account)
+	console.log(my_hotel)
 	const [count, setCount] = useState(1)
-	function myfuntion() {
-		setCount(0)
+	function logout() {
+		if (window.confirm('Are you sure you want you logout?')) {
+			window.name = -10
+			window.location = 'http://localhost:3001/'
+		}
 	}
 	function myfuntion1() {
 		setCount(1)
@@ -33,7 +44,7 @@ const ManagePage = () => {
 				<section id='manage_area'>
 					<section id='manage_option'>
 						<section id='menu_option'>
-							<div className='icon'>
+							<div className='icon' onClick={logout}>
 								<LogoutIcon fontSize='large' sx={{ color: grey[100] }} />
 							</div>
 
@@ -59,7 +70,18 @@ const ManagePage = () => {
 								} else if (count === 2) {
 									return <RoomManageSeg />
 								} else if (count === 3) {
-									return <InfoSeg />
+									return my_hotel[0] && my_account[0] ? (
+										<InfoSeg
+											accountID={my_account[0].id}
+											name={my_hotel[0].name}
+											address={my_hotel[0].address}
+											email={my_hotel[0].email}
+											imageURL={my_hotel[0].imageURL}
+											phone={my_hotel[0].phone}
+										/>
+									) : (
+										<InfoSeg />
+									)
 								}
 							})()}{' '}
 						</section>

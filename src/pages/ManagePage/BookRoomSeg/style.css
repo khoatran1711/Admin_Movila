@@ -56,6 +56,7 @@
 }
 
 .booked_room_img{
+    overflow: hidden;
     background-size: 100% 100%;
     width: 16vw;
     height: 15vw;
@@ -185,4 +186,11 @@
     background:#fdfbf4 ;
     color: #472F23;
     transition: 0.5s;
+}
+
+#No_book{
+    text-align: center;
+    font-size: 3vw;
+    font-family: Intrepid;
+    color: white;
 }

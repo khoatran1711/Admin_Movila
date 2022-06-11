@@ -11,15 +11,16 @@ const Manage = lazy(() => import('./pages/ManagePage'))
 
 const queryClient = new QueryClient()
 function App() {
+	console.log(window.name)
 	return (
 		<div className='App'>
 			<QueryClientProvider client={queryClient}>
 				<Router>
 					<Suspense fallback={<h1>Loading...</h1>}>
 						<Switch>
-							<Route component={Manage} path='/' exact />
 							<Route component={Login} path='/login' exact />
 							<Route component={Manage} path='/manage' exact />
+							<Route component={Login} path='/' exact />
 						</Switch>
 					</Suspense>
 				</Router>

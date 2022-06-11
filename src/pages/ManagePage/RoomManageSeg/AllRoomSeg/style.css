@@ -59,5 +59,6 @@
     margin-top: 3vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 15px;
+    row-gap: 30px;
+    margin-bottom: 10vw;
 }
